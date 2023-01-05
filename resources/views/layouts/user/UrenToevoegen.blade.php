@@ -68,7 +68,9 @@
 {{--                        <div class="col-md">--}}
                             <th class="tableheadfont tableheadfontSupportedContent">Klantnaam</th>
 {{--                        </div>--}}
-{{--                        <div class="col-md">--}}
+                            <th class="tableheadfont d-none d-md-table-cell tableheadfontSupportedContent">Totaal</th>
+
+                    {{--                        <div class="col-md">--}}
                             <th class="tableheadfont tableheadfontSupportedContent"></th>
 {{--                        </div>--}}
                     {{--toeslag--}}
@@ -86,8 +88,9 @@
                                 <td class="tablerowcell tablerowcellSupportedContent datepicker">
                                     {{ $tijd->datum->format('d-m-Y') }}
                                     <div class="d-md-none tablerowcellSupportedContent">
-                                        {{ $tijd->begintijd }} <br />
-                                        {{ $tijd->eindtijd }}
+                                        {{ $tijd->begintijd }} <br/>
+                                        {{ $tijd->eindtijd }} <br/>
+                                        {{ $tijd->uren }} uren
                                     </div>
                                 </td>
 {{--                            </div>--}}
@@ -100,7 +103,9 @@
 {{--                            </div>--}}
 {{--                            <div class="col-md">--}}
                                 <td class="tablerowcell tablerowcellSupportedContent">{{ $tijd->bedrijf->bedrijfsnaam }}</td>
-{{--                            </div>--}}
+                                <td class="tablerowcell d-none d-md-table-cell tablerowcellSupportedContent">{{ $tijd->uren }} uren</td>
+
+                            {{--                            </div>--}}
 
 {{--                            <div class="col-md">--}}
                                 <td class="tablerowcell ">
